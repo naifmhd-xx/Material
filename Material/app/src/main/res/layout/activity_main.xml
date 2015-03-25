@@ -8,20 +8,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context="com.knaive.naif.material.MainActivity">
 
         <include
             android:id="@+id/tool_bar"
-            layout="@layout/tool_bar"
-            />
+            layout="@layout/tool_bar" />
 
-        <TextView
-            android:layout_below="@+id/tool_bar"
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <tabs.SlidingTabsLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
     </LinearLayout>
+
     <fragment
         android:id="@+id/fragment_navigation_drawer"
         android:name="com.knaive.naif.material.NavigationDrawerFragment"

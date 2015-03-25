@@ -1,6 +1,7 @@
 package com.knaive.naif.material;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
         return data.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class MyViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView icon;
 
@@ -54,13 +55,10 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.listText);
             icon = (ImageView) itemView.findViewById(R.id.listIcon);
-            icon.setOnClickListener(this);
         }
 
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(context,"Item Clicked at"+getPosition(), Toast.LENGTH_SHORT).show();
 
-        }
     }
+
+
 }
